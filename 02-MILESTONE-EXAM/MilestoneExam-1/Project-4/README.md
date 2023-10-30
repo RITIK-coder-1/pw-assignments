@@ -27,5 +27,5 @@ The Pixelab Website is a personal project created by RITIK as a showcase of my w
 
 ## Contact
 
-- Feel free to reach out to me if you have any questions or feedback regarding this project: ritikprofessional111@gmail.com or "@_ R _ T _ K _ _" on twitter (ignore the spaces)
+- Feel free to reach out to me if you have any questions or feedback regarding this project: https://linktr.ee/RITIK_MAHAPATRA
 

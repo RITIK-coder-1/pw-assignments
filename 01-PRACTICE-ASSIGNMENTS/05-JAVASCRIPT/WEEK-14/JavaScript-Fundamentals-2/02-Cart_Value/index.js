@@ -3,7 +3,7 @@
 
 function totalCartValue(...cart) {
 
-    if (cart.length === 0) {
+    if (cart.length === 0){
       return 0;
     }
 

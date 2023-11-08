@@ -1,3 +1,6 @@
+// Program to find remaining days for any event from current date ---------->
+
+
 function remainingDays(anyDate) {
     const currentDate = new Date("Nov 6, 2023") / (1000*60*60*24)
     return anyDate - currentDate

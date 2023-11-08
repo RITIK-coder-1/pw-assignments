@@ -1,3 +1,5 @@
+// Program to find discounted price ------------->
+
 let totalValue = 2000
 let discountPercentage = 20
 

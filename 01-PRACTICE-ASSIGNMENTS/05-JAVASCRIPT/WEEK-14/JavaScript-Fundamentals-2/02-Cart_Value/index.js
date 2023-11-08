@@ -1,3 +1,6 @@
+// Function to calculate the total sum of all the prices within a cart ----->
+
+
 function totalCartValue(...cart) {
 
     if (cart.length === 0) {

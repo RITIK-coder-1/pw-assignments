@@ -1,3 +1,7 @@
+// Function to check if a user is present in a list ------> 
+
+
+
 const list1 = [ "Ritik", "Bijay", "Mithun" ]
 const list2 = [ "Sonali", "Sunena", "Sushma" ]
 

@@ -1,3 +1,5 @@
+// Function to find the maximum and minimum price products -------->
+
 const products = [
     { name: "Mobile", price: 70000 },
     { name: "Laptop", price: 120000 },

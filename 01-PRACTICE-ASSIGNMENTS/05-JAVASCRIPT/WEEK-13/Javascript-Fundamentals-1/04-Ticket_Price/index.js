@@ -1,3 +1,5 @@
+// Program to find the total ticket price depending upon the number of children, adults and seniors ---------->
+
 const childTicketPrice = 100
 const adultTicketPrice = 150
 const seniorTicketPrice = 120

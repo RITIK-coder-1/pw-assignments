@@ -1,3 +1,6 @@
+// Program to display first 10 whole numbers ----------->
+
+
 let task = "Counting from 10 to 0"
 console.log(task);
 

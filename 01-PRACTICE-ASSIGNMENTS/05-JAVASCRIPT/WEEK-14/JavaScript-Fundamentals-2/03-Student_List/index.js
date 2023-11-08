@@ -1,3 +1,6 @@
+// Function to check if any student is passed or failed --------->
+
+
 const students = [
     { name: "Alice", score: 85 },
     { name: "Bob", score: 92 },

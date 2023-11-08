@@ -1,3 +1,6 @@
+// Program to display the delivery time accordting to selected package ------------>
+
+
 let package = "standard"
 
 switch (package) {

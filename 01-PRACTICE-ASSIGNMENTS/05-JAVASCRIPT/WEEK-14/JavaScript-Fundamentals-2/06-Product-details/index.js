@@ -1,3 +1,5 @@
+// Program to print product details ----------->
+
 const productDetails = {
     name: "Apple 2020 macbook air laptop",
     price: 82000,

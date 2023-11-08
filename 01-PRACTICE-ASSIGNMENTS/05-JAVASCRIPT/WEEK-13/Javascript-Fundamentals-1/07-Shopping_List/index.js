@@ -1,3 +1,5 @@
+// Program to display all the elements of an array --------->
+
 const shoppingList = ["Apples", "Bananas", "Milk", "Bread", "Eggs"];
 
 console.log("Shopping List:");

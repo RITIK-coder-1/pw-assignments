@@ -1,3 +1,6 @@
+// Program to check if any given string has unique characters or not ----------->
+
+
 function uniqueCharcterCheck(anyString) {
     let isUnique = true
 

@@ -40,7 +40,7 @@ let isPassed = false
 
 }
 
-checkResults("Grace")
+checkResults("Alice")
 
 // Function for displaying all the students ------------>
 

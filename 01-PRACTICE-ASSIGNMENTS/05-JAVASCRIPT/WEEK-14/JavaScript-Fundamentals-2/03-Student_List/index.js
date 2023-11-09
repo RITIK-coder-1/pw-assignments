@@ -24,8 +24,10 @@ let isPassed = false
         if (students[index].hasOwnProperty("name") && students[index].hasOwnProperty("score")) {
             if (students[index].name === anyString && students[index].score >= 90) {
                 isPassed = true
-            } 
+            }
         }
+        
+        
     }  
 
     if (isPassed){
@@ -36,8 +38,7 @@ let isPassed = false
         let statement2 = `Sorry ! ${anyString}, You couldn't clear the exam.`
         console.log(statement2);
         return statement2
-    }
-
+    } 
 }
 
 checkResults("Alice")

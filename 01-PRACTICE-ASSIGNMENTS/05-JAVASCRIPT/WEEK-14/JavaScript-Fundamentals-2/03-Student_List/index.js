@@ -25,9 +25,7 @@ let isPassed = false
             if (students[index].name === anyString && students[index].score >= 90) {
                 isPassed = true
             }
-        }
-        
-        
+        }   
     }  
 
     if (isPassed){
@@ -41,7 +39,7 @@ let isPassed = false
     } 
 }
 
-checkResults("Grace")
+checkResults("Alice")
 
 // Function for displaying all the students ------------>
 

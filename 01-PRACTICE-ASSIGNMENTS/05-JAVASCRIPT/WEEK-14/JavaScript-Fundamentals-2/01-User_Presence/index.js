@@ -5,14 +5,13 @@
 const list1 = [ "Ritik", "Bijay", "Mithun" ]
 const list2 = [ "Sonali", "Sunena", "Sushma" ]
 
-function isUserPresent(anyList, username) {
-    if (anyList.includes(username)){
-        console.log(`Yes, ${username} is a valid user.`);
+const isUserPresent = (list, username) => {
+    if (list.includes(username)){
+        return `Yes, ${username} is present in the list`
     } else {
-        console.log(`${username} is not a valid user!`);
+        return `${username} is not present in the list`
     }
 }
 
-isUserPresent(list1, "Mithun")
-isUserPresent(list2, "Sushma")
-isUserPresent(list1, "someone")
+console.log(isUserPresent(list1, "Mithun"));
+console.log(isUserPresent(list2, "Ritik"));

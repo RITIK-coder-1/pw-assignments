@@ -1,16 +1,19 @@
 // Function to calculate the total sum of all the prices within a cart ----->
 
+const cart = [125, 20, 30]
 
-function totalCartValue(...cart) {
+let sum = 0
 
-    if (cart.length === 0){
-      return 0;
-    }
+function totalCartValue(anyCart) {
+  for (let index = 0; index < anyCart.length; index++) {
+  sum += cart[index]
+}
+  return `The total cart value is: ${sum}`
+}
 
-    const sum = cart.reduce((total, num1) => total + num1, 0);
-    let statement = `the total cart value is: ${sum}`
-    console.log(statement);
-    return statement;
-  }
-  
-totalCartValue(125, 20, 30)
+console.log(totalCartValue(cart));
+console.log(totalCartValue(125, 20, 30));
+
+
+
+

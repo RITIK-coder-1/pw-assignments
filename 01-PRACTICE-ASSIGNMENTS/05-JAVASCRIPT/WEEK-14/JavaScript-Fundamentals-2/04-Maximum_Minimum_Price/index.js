@@ -3,7 +3,6 @@
 const products = [
     { name: "Mobile", price: 70000 },
     { name: "Laptop", price: 120000 },
-    { name: "Iphone", price: 150000 },
     { name: "Laptop Bag", price: 20000 },
     { name: "Watch", price: 20000 },
     { name: "Mobile charger", price: 1500 }

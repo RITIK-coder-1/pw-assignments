@@ -2,10 +2,12 @@
 
 
 function remainingDays(anyDate) {
-    const currentDate = new Date("Nov 6, 2023") / (1000*60*60*24)
-    return anyDate - currentDate
+    const currentDate = new Date("Nov 6, 2023") / (1000*60*60*24) // in Days
+    const Days = anyDate - currentDate
+    return `The remaining days for the event: ${Days}`
 }
 
-const eventDate = new Date("Dec 6, 2023") / (1000*60*60*24)
+const eventDate = new Date("Dec 7, 2023") / (1000*60*60*24) // in Days
 
-console.log(`The remaining days for the event: ${remainingDays(eventDate)}`);
+const daysLeft = remainingDays(eventDate)
+console.log(daysLeft);

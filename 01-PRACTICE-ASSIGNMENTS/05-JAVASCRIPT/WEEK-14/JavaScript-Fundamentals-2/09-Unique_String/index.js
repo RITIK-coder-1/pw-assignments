@@ -1,26 +1,28 @@
 // Program to check if any given string has unique characters or not ----------->
 
-
-function uniqueCharcterCheck(anyString) {
+const uniqueString = (anyString) => {
     let isUnique = true
-
     for (let i = 0; i < anyString.length; i++) {
-        for (let j = i + 1; j < anyString.length; j++){
-            if (i != j) {
-                if (anyString[i] === anyString[j]) {
-                    isUnique = false
-                    break; // it doesn't need to iterate over other characters now as we already know the result
-                }
+        for (let j = i + 1; j < anyString.length; j++) {
+            if (anyString[i] === anyString[j]) {
+                isUnique = false
+                break; // stop the inner loop // to avoid furthur iteration after finding the common value 
             } 
         }    
-    }
+        if (!isUnique){
+            break; // stop the outer loop once the common value is found
+        }  
+    } 
     
-    if (isUnique) {
-        console.log(`the string '${anyString}' has unique characters!`);
+
+    if (isUnique){
+        console.log("This String has got unique characters!");
     } else {
-        console.log(`the string '${anyString}' does not have unique characters!`);
+        console.log("This String doesn't have all unique characters!");
     }
 }
 
-uniqueCharcterCheck("ritik")
-uniqueCharcterCheck("sonali")
+uniqueString("ritik")
+uniqueString("sonali")
+uniqueString("kkkk")
+uniqueString("Jack")

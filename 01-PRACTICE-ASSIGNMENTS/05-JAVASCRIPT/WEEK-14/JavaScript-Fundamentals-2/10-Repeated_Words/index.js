@@ -1,22 +1,17 @@
-let sentence = "hey hey"
+let sent = "Hey Hey, this is ritik! Do you know who Ritik is? Ufff"
 
-function repeated(string){
-let repeat = false 
-let number = 0
-for (let i = 0; i < string.length; i++) {
-    for (let j = 0; j < string.length; j++){
-        if (string[i] === string[j]){
-            repeat = true
-            // number++
-        }
+const count = (sentence) => {
+    const repeatCount = new Map()
+    const words = sentence.toLowerCase().split(" ");
+
+    for (let index = 0; index < words.length; index++) {
+        const word = words[index].replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '')
+        const repeat = repeatCount.get(word) || 0;
+        repeatCount.set(word, repeat + 1);
     }
+    console.log(repeatCount);
+    return repeatCount;
 }
 
-if (repeat){
-    console.log("true" + number);
-} else {
-    console.log("false");
-}
-}
+count(sent)
 
-repeated(sentence)

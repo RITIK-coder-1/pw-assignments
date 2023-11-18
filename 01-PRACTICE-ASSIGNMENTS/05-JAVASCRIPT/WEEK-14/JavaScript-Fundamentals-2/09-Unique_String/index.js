@@ -26,3 +26,28 @@ uniqueString("ritik")
 uniqueString("sonali")
 uniqueString("kkkk")
 uniqueString("Jack")
+
+// USING A SET ------------------->
+
+const hasUniqueCharacters = (username) => {
+const charSet = new Set();
+      
+for (let i = 0; i < username.length; i++) {
+    if (charSet.has(username[i])) {
+        return "The username does not have all unique characters!"; // If a character is already in the Set, it's not unique
+    }
+    charSet.add(username[i]);
+    }
+    
+    return "The username has unique characters!"; // All characters are unique
+}
+        
+const username1 = "ritik"
+const username2 = "sonali"
+const username3 = "kkkk"
+const username4 = "Jack"
+
+console.log(hasUniqueCharacters(username1));
+console.log(hasUniqueCharacters(username2));
+console.log(hasUniqueCharacters(username3));
+console.log(hasUniqueCharacters(username4));

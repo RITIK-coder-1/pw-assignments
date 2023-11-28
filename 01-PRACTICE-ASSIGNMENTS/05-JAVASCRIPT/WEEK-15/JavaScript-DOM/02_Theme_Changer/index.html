@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Assignment 2</title>
+</head>
+<body>
+    <h1 id="heading">This is White Theme</h1>
+    <button id="button">Toggle Theme</button>
+</body>
+<script>
+    const body = document.body
+    const button = document.querySelector("#button")
+    const heading = document.querySelector("#heading")
+
+    button.addEventListener(("click"), () => {
+
+        body.style.backgroundColor = "black"
+        heading.textContent = "This is Dark Theme"
+        heading.style.color = "white"
+
+    })
+</script>
+</html>

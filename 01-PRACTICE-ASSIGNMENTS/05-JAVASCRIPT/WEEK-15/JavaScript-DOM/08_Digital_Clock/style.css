@@ -1,5 +1,20 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+}
 div{
     width: 250px;
     height: 100px;
-    background-color: red;
+    background-color: aqua;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 35px;
+    font-weight: 900;
+    font-family: 'Courier New', Courier, monospace;
 }

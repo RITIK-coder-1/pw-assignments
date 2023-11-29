@@ -8,6 +8,11 @@ const updateTime = () => {
     
     const div = document.querySelector("div")
     div.textContent = time;
+
+    const bgColor = `#${hour}${mins}${secs}`;
+    div.style.backgroundColor = bgColor;
 }
 
 setInterval(updateTime, 1000);
+
+

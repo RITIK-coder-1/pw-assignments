@@ -11,4 +11,4 @@ submit.addEventListener("click", () => {
     } else {
         alert("Form Submission Successful!")
     }
-})
+}, false)

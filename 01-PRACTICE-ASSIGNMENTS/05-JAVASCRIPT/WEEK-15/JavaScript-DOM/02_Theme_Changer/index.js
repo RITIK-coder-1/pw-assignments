@@ -8,4 +8,4 @@ button.addEventListener(("click"), () => {
     heading.textContent = "This is Dark Theme"
     heading.style.color = "white"
 
-})
+}, false)

@@ -14,4 +14,4 @@ button.addEventListener("click", () => {
         heading.textContent = "Your Image is visible." 
     }
     
-})
+}, false)

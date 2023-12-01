@@ -10,7 +10,7 @@ const updateTime = () => {
     div.textContent = time;
 
     const bgColor = `#${hour}${mins}${secs}`;
-    div.style.backgroundColor = bgColor;
+    document.body.style.backgroundColor = bgColor;
 }
 
 setInterval(updateTime, 1000);

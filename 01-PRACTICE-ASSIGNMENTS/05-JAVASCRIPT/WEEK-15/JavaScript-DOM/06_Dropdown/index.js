@@ -1,13 +1,10 @@
 const dropdown = ["JavaScript", "Java", "Python", "C++"]
 
-const option1 = document.querySelector("option[value='option1']")
-option1.append(dropdown[0])
+const selectDropdown = document.getElementById('dropdown');
 
-const option2 = document.querySelector("option[value='option2']")
-option2.append(dropdown[1])
-
-const option3 = document.querySelector("option[value='option3']")
-option3.append(dropdown[2])
-
-const option4 = document.querySelector("option[value='option4']")
-option4.append(dropdown[3])
+dropdown.forEach(language => {
+    const option = document.createElement('option');
+    option.value = language
+    option.textContent = language
+    selectDropdown.append(option)
+});

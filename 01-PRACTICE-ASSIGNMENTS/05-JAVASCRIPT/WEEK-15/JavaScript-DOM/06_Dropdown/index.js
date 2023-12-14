@@ -1,10 +1,22 @@
-const dropdown = ["JavaScript", "Java", "Python", "C++"]
+const dropdown = ["JavaScript", "Java", "Python", "C", "C++"]
 
-const selectDropdown = document.getElementById('dropdown');
+const selectElements = document.getElementById("dropdown")
 
-dropdown.forEach(language => {
-    const option = document.createElement('option');
+dropdown.forEach((language) => {
+
+    const option = document.createElement("option")
     option.value = language
     option.textContent = language
-    selectDropdown.append(option)
+
+    selectElements.append(option)
+})
+
+selectElements.addEventListener("change", function() {
+
+    const selectedOption = this.options[this.selectedIndex];
+
+    const p = document.querySelector("p")
+    p.innerText = `Your Favourite Programming Language has been set to: ${selectedOption.value}`
+
 });
+

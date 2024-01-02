@@ -5,6 +5,9 @@ const logout = document.getElementById("logout")
 logout.style.cursor = "pointer"
 const heading = document.getElementById("heading")
 
+let loggedIn = false
+let loggedOut = false
+
 const createForm  = function (){
     const form = document.createElement("form")
     form.style.display = "flex"
@@ -34,33 +37,37 @@ const createForm  = function (){
     form.append(input2)
     form.append(submit)
     body.append(form)
-
-    submit.addEventListener("click", () => {
-        event.preventDefault()
-        if (input1.value === "" || input2.value === "") {
-            alert("please fill the form first!")
-        } else {
-            heading.innerText = "The User has logged In."
-            const form = document.getElementsByTagName("form")
-            for (let index = 0; index < form.length; index++) {
-            const element = form[index];  
-            element.remove()        
-        }
-        }  
-    })
 }
 
 
 login.addEventListener("click", () => {
-    createForm()
-})
+    if (loggedIn === false){
+        createForm()
+    } else {
+        document.querySelector('form').remove()
+    }
+
+    if (loggedIn === false){
+        loggedIn = true
+    } else {
+        loggedIn = false
+    }
+}, false)
+
 
 logout.addEventListener("click", () => {
-    alert("Are you sure? You want to log out?")
-    const form = document.getElementsByTagName("form")
-    for (let index = 0; index < form.length; index++) {
+    if (loggedIn === false){
+        alert("You haven't logged in yet!")
+    } else if (loggedOut === false && loggedIn === true){
+        alert("Are you sure? You want to log out?")
+        const form = document.getElementsByTagName("form")
+        for (let index = 0; index < form.length; index++) {
         const element = form[index];  
         element.remove()        
+        }
+        heading.innerText = "The User has Logged Out."
+        loggedOut = true
+    } else if (loggedOut === true) {
+        alert("You have already logged Out!")
     }
-    heading.innerText = "The User has Logged Out."
-})
+}, false)

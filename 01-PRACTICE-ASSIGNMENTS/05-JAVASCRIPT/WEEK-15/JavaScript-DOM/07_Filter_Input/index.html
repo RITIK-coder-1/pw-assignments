@@ -10,28 +10,12 @@
         <input type="text" id="input">
     </form>
     <ul id="unordered-list">
-        <li id="one">html</li>
-        <li id="two">css</li>
+        <li id="one">HTML</li>
+        <li id="two">CSS</li>
+        <li id="three">JavaScript</li>
+        <li id="four">Tailwind</li>
+        <li id="five">ReactJS</li>
     </ul>
 </body>
-<script>
-    const input = document.getElementById("input")
-    const unorderedList = document.getElementById("unordered-list")
-    const one = document.getElementById("one")
-    const two = document.getElementById("two")
-
-    input.addEventListener('change', () => {
-        const value = input.value
-        if (!(one.innerText.includes(value))) {
-            one.style.display = "none"
-        } else {
-            one.style.display = "list-item"
-        }
-        if (!(two.innerText.includes(value))) {
-            two.style.display = "none"
-        } else {
-            two.style.display = "list-item"
-        }
-    })
-</script>
+<script src="index.js"></script>
 </html>

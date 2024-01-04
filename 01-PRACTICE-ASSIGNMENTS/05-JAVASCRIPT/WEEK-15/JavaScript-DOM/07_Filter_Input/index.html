@@ -22,12 +22,15 @@
 
     input.addEventListener('change', () => {
         const value = input.value
-        for (let i = 0; i < one.innerText.length; i++){
-            const element = one.innerText[i]
-            console.log(element);
-            if (value.includes(element)){
-                two.remove()
-            }
+        if (!(one.innerText.includes(value))) {
+            one.style.display = "none"
+        } else {
+            one.style.display = "list-item"
+        }
+        if (!(two.innerText.includes(value))) {
+            two.style.display = "none"
+        } else {
+            two.style.display = "list-item"
         }
     })
 </script>

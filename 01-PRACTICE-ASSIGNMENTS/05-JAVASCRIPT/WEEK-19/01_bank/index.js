@@ -10,8 +10,8 @@ class bankAccount{
 
     deposit(amount){
         if (amount >= 0) {
-            let newBalance = this.principal + amount
-            console.log(`The Deposited amount: ${amount} and the current balance: ${newBalance}`);
+            this.principal += amount
+            console.log(`The Deposited amount: ${amount} and the current balance: ${this.principal}`);
         } else {
             console.log("Invalid deposit amount. Please enter a positive amount!");
         }
@@ -19,8 +19,8 @@ class bankAccount{
 
     withdraw(amount){
         if (amount >= 0 && amount < this.principal) {
-            let newBalanace = this.principal - amount
-            console.log(`The Withdrawn amount: ${amount} and the current balance: ${newBalanace}`);
+            this.principal -= amount
+            console.log(`The Withdrawn amount: ${amount} and the current balance: ${this.principal}`);
         } 
         else if (amount === this.principal || amount > this.principal){
             console.log("Insufficient funds for withdrawal");

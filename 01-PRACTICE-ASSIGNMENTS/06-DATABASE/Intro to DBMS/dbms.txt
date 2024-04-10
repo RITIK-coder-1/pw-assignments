@@ -1,0 +1,59 @@
+1) What is a Database? Why do we need a database?
+
+Ans: A Database is a storage system that stores interrelated data in a structured format to derive meaningful information. We need a database in order to process unstructured data into meaningful information. We can use it not only to store data but also perform multiple operations related to it while also defining relationship between multiple types of data.
+
+2) Write a short note on File Based Storage System and its challenges.
+
+Ans: The File Based Storage System is the traditional way of storing data as files and folders just like on our devices. It has folders, sub-folders and files. 
+
+The major challenges of it were: It can not define a specific schema to store data, it can not define relationships between different data, it doesn't provide ultra security features, it is prone to data redundancy and inconsistencies, it doesn't provide decent concurrency controls, etc.
+
+3) What is DBMS and what was its need?
+
+Ans: DBMS stands for Database Management System. It is a software that surrounds the database and responsible for all the features that are provided and helps to perform operations in order to retrieve, update, insert and delete data within the database.
+
+It was developved in order to counter the challenges of the traditional file based storage system, to store data in a structured format and also define relations between them.
+
+4) Explain 5 challenges of File based system that were tackled by DBMS.
+
+Ans: File based systems are prone to data redundancy whereas DBMS has specific features to reduce data redundancy while maintaining data consistency and integrity.
+
+File based systems do not provide decent concurrency control, if multiple users are using the files, it may lead to data redundancy and inconsistencies. DBMS has better concurrency controls, multiple users can easily use the database concurrently.
+
+File based system does not define any relationship between the different files whereas DBMS easily defines multiple relationships among multiple records.
+
+DBMS provides the features of views using which different parts of the database can be shown to different users, this is not available in the file system.
+
+File systems do not provide decent security options, while DBMS makes sure to secure data using advanced security features like authentication and authorization.
+
+5) Explain different types of DBMS classifications.
+
+Ans: On the basis of data models, DBMS has been classified into various categories:
+
+The DBMS that follows the relational model is called Relational Database Management System (RDBMS), it stores data in form of tables where a table represents an entity, each row represents an instance of the entity and each column represents the attributes.
+
+Some DBMS follow the hiererchical model where data is represented as a hiererchy of parents and children. No child can have more than one parent.
+
+Some DBMS follow the network model which is an upgradation to the hiererchical model. Here, a child can have multiple parents, representing complex relationships.
+
+The Object Oriented DBMS follow the Object Oriented Model where data is stored as objects and their behaviour is also taken into consideration.
+
+6) What is data modelling and its types?
+
+Ans: Data Modelling refers to modelling how the data will be stored conceptually and logically. There are multiple types of data models:
+
+The Relational Model stores data in form of tables where a table represents an entity, each row represents an instance of the entity and each column represents the attributes.
+
+The Hiererchical Model represents data as a hiererchy of parents and children. No child can have more than one parent.
+
+The Network Model is an upgradation to the hiererchical model. Here, a child can have multiple parents, representing complex relationships.
+
+The Object Oriented Model stores data as objects and their behaviour is also taken into consideration.
+
+7) Explain the three schema architecture and its advantages.
+
+Ans: The three schema architecture divides the database schema into three layers: The physical layer, the logical layer and the external view level layer.
+
+The physical schema represents how data will be stored physically, the logical layer represents how data will be stored logically and conceptually, the view level schema represents how it will finally presented to the end users.
+
+Its biggest advantage is that it supports data independece that means changing anything in the physical layer will not change the logical layer and changing the logical layer will not change anything in the external layer. This helps us to change the schema of the database without affecting the users' experience.

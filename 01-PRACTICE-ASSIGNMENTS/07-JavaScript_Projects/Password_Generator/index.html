@@ -1,12 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="w-full h-full">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Password Generator</title>
     <link rel="stylesheet" href="output.css">
 </head>
-<body class="bg-slate-600">
-    <h1 class="text-5xl bg-orange-700">hey</h1>
+<body class="w-full h-full bg-slate-900 flex justify-center items-center">
+    <!-- Password Container -->
+
+    <div class="w-1/2 h-96 border-white border-solid border flex flex-col justify-between items-center py-3">
+
+        <h1 class="text-white font-bold text-xl">Password Generator</h1>
+
+        <!-- Password Field -->
+        <input type="text" placeholder="Click On Generate Button" class="w-5/6 rounded p-1 px-3">
+
+        <!-- Generate Button -->
+        <div class="w-auto h-6 flex justify-between items-center gap-1 py-3">
+            <button class="w-28 text-white text-sm font-bold bg-purple-700 p-1 rounded">Generate</button>
+            <button class="w-36 text-white text-sm font-bold bg-purple-700 p-1 rounded">Copy To Clipboard</button>
+        </div>
+
+        <!-- Password Properties -->
+        <div class="w-auto h-auto flex justify-between items-center gap-7 py-3">
+
+            <div class="w-auto h-full">
+                <ul class="flex flex-col justify-between gap-3 text-white font-semibold">
+                    <li>Password Length</li>
+                    <li>Include Uppercase Letters</li>
+                    <li>Include Lowercase Letters</li>
+                    <li>Include Numbers</li>
+                    <li>Include Symbols</li>
+                </ul>
+            </div>
+
+            <div class="w-auto h-full flex flex-col justify-between gap-3">
+                <input type="number" class="w-20 h-5 bg-slate-900 border border-white border-solid text-white rounded">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+            </div>
+
+        </div>
+    </div>
 </body>
 </html>

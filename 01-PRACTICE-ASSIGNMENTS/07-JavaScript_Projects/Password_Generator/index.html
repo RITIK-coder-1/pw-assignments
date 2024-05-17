@@ -14,12 +14,12 @@
         <h1 class="text-white font-bold text-xl">Password Generator</h1>
 
         <!-- Password Field -->
-        <input type="text" placeholder="Click On Generate Button" class="w-5/6 rounded p-1 px-3 focus-within:outline-none" readonly>
+        <input type="text" placeholder="Click On Generate Button" class="w-5/6 rounded p-1 px-3 focus-within:outline-none" readonly id="password">
 
         <!-- Generate Button -->
         <div class="w-auto h-6 flex justify-between items-center gap-1 py-3">
-            <button class="w-28 text-white text-sm font-bold bg-purple-700 p-1 rounded transition hover:bg-purple-950" title="Generate Your Password">Generate</button>
-            <button class="w-36 text-white text-sm font-bold bg-purple-700 p-1 rounded transition hover:bg-purple-950" title="Copy The Password to Clipboard">Copy To Clipboard</button>
+            <button class="w-28 text-white text-sm font-bold bg-purple-700 p-1 rounded transition hover:bg-purple-950" title="Generate Your Password" id="generatePassword">Generate</button>
+            <button class="w-36 text-white text-sm font-bold bg-purple-700 p-1 rounded transition hover:bg-purple-950" title="Copy The Password to Clipboard" id="copyToClipboard">Copy To Clipboard</button>
         </div>
 
         <!-- Password Properties -->
@@ -27,11 +27,11 @@
 
             <div class="w-auto h-full">
                 <ul class="flex flex-col justify-between gap-3 text-white font-semibold">
-                    <li title="Decide Your Password Length">Password Length</li>
-                    <li title="If you want to include uppercase letters">Include Uppercase Letters</li>
-                    <li title="If you want to include lowercase letters">Include Lowercase Letters</li>
-                    <li title="If you want to include Numbers">Include Numbers</li>
-                    <li title="If you want to include Symbols">Include Symbols</li>
+                    <li title="Decide Your Password Length" id="passwordLength">Password Length</li>
+                    <li title="If you want to include uppercase letters" id="uppercase">Include Uppercase Letters</li>
+                    <li title="If you want to include lowercase letters" id="lowercase">Include Lowercase Letters</li>
+                    <li title="If you want to include Numbers" id="includeNumbers">Include Numbers</li>
+                    <li title="If you want to include Symbols" id="includeSymbols">Include Symbols</li>
                 </ul>
             </div>
 
@@ -46,4 +46,5 @@
         </div>
     </div>
 </body>
+<script src="index.js"></script>
 </html>

@@ -47,8 +47,14 @@ generatePassword.addEventListener("click", () => {
         } 
         
         password.value = applyAllConditions(passwordValue)
+
+        copyToClipboard.addEventListener("click", () => {
+            navigator.clipboard.writeText(password.value) // this method copies the specified text to the clipboard
+        })
     }
 }, false)
+
+
 
 
 // switch to include or not include characters -->
@@ -60,20 +66,20 @@ passwordLength.addEventListener("click", () => {
     } else if (passwordLength.value > 73){
         alert("The maximun length is 73") // increasing beyond 73 the value will alert the user that the maximum length of the password is 73 and it remains unchanged unless decremented
     }
-    
-})
+
+}, false)
 uppercase.addEventListener("click", () => {
     includeUppercase = change(includeUppercase) // it stores the negated value
-})
+}, false)
 lowercase.addEventListener("click", () => {
     includeLowercase = change(includeLowercase) // it stores the negated value
-})
+}, false)
 numbers.addEventListener("click", () => {
     includeNumbers = change(includeNumbers) // it stores the negated value
-})
+}, false)
 symbols.addEventListener("click", () => {
     includeSymbols = change(includeSymbols) // it stores the negated value
-})
+}, false)
 
 // function to change an element's state -->
 

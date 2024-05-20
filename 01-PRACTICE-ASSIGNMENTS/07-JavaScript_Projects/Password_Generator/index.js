@@ -22,21 +22,6 @@ let includeSymbols = true
 
 const passwordString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_" // these are the password characters out of which a password will be generated
 
-// switch to include or not include characters -->
-
-uppercase.addEventListener("click", () => {
-    includeUppercase = change(includeUppercase) // it stores the neegated value
-})
-lowercase.addEventListener("click", () => {
-    includeLowercase = change(includeLowercase) // it stores the neegated value
-})
-numbers.addEventListener("click", () => {
-    includeNumbers = change(includeNumbers) // it stores the neegated value
-})
-symbols.addEventListener("click", () => {
-    includeSymbols = change(includeSymbols) // it stores the neegated value
-})
-
 // code logic to generate password -->
 
 generatePassword.addEventListener("click", () => {
@@ -46,9 +31,13 @@ generatePassword.addEventListener("click", () => {
         array.push(element) // clicking the button will push the characters to this array
         let stringArray = array.toString().replace(/,/g, "") // using the replace method, I replaced all the occurences of the comma. regex "g" flag replaces all the occurences 
         let random = randomNumber() // this stores the return value of the randomNumber() function that is a random number from 0 to 72
-        let passwordValue = stringArray.substring(random, random + 8) // this takes a substring out of the string from a random position and maintains the default length to be 8
-        password.value = passwordValue // the value of the password
-        // it will show the array content inside the password box
+        // it will show the array content inside the password box -->
+        if (passwordLength.value <= 8) {
+            password.value = stringArray.substring(random, random + 8) // this takes a substring out of the string from a random position and maintains the default length to be 8
+        } else {
+            password.value = stringArray.substring(random, random + Number(passwordLength.value)) // if the value is more than 8, that specific number of characters will be displayed. I converted the value into a Number, because the default value was a string.
+        } 
+        
         if (!includeUppercase) {
             password.value = passwordValue.toLowerCase() // if uppercase letters are discluded, all the characters will be in lowercase
         }
@@ -63,6 +52,26 @@ generatePassword.addEventListener("click", () => {
         }
     }
 }, false)
+
+// switch to include or not include characters -->
+
+passwordLength.addEventListener("click", () => {
+    if (passwordLength.value < 8){
+        alert("The minimun value is 8")
+    }
+})
+uppercase.addEventListener("click", () => {
+    includeUppercase = change(includeUppercase) // it stores the negated value
+})
+lowercase.addEventListener("click", () => {
+    includeLowercase = change(includeLowercase) // it stores the negated value
+})
+numbers.addEventListener("click", () => {
+    includeNumbers = change(includeNumbers) // it stores the negated value
+})
+symbols.addEventListener("click", () => {
+    includeSymbols = change(includeSymbols) // it stores the negated value
+})
 
 // function to change an element's state -->
 

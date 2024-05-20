@@ -25,15 +25,21 @@ const passwordString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234
 // code logic to generate password -->
 
 generatePassword.addEventListener("click", () => {
+
     for (let i = 0; i < passwordString.length; i++) {
+
         const element = passwordString[i * randomTarget()]; // this helps to shuffle between characters, so that the password is not always linear
-        console.log(element)
+
         array.push(element) // clicking the button will push the characters to this array
+
         let stringArray = array.join("") // this will store the string value of the array content without any space
+
         let random = randomNumber() // this stores the return value of the randomNumber() function that is a random number from 0 to 73 (String Length)
 
         // it will show the array content inside the password box -->
+
         let passwordValue = password.value = stringArray.substring(random, random + Number(passwordLength.value))  // this takes a substring out of the string from a random position and maintains the length to be whatever is the selected length of the password. I converted the value into a Number, because the default value was a string.
+
         if (passwordLength.value <= 8) {
             password.value = stringArray.substring(random, random + 8) // this takes a substring out of the string from a random position and maintains the default length to be 8
         } else if (passwordLength.value > 8 && passwordLength.value <= 73){
@@ -48,11 +54,13 @@ generatePassword.addEventListener("click", () => {
 // switch to include or not include characters -->
 
 passwordLength.addEventListener("click", () => {
+
     if (passwordLength.value < 8){
         alert("The minimun value is 8") // lowering the value will alert the user that the minimum length of the password is 8 and it remains unchanged unless incremented
     } else if (passwordLength.value > 73){
         alert("The maximun length is 73") // increasing beyond 73 the value will alert the user that the maximum length of the password is 73 and it remains unchanged unless decremented
     }
+    
 })
 uppercase.addEventListener("click", () => {
     includeUppercase = change(includeUppercase) // it stores the negated value
